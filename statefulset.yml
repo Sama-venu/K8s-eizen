@@ -37,7 +37,7 @@ spec:
 
           volumeMounts:
             - name:  pvc-1
-              mountPath: /var/lib/mysql   
+              mountPath: /usr/share/nginx/html/
 
 
       volumeClaimTemplates:
@@ -46,6 +46,7 @@ spec:
           spec:
             accessModes:
               - ReadWriteOnce
+            storageClassName: gp2  
             resources:
               requests:
                 storage: 2Gi  
